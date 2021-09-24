@@ -2,26 +2,42 @@ package dev.surehand;
 
 public class Calculator {
 
-    public Calculator(double a, double b) {
+    public Calculator() {
     }
 
-    public double getAddition(double a, double b) {
+    public static int add(int a, int b) {
         return a + b;
     }
 
-    public double getSubtraction(double a, double b) {
+    public static int subtract(int a, int b) {
         return a - b;
     }
 
-    public double getMultiplication(double a, double b) {
+    public static int multiply(int a, int b) {
         return a * b;
     }
 
-    public double getDivision(double a, double b) {
+    public static double divide(int a, int b) {
+        return (double) a / (double) b;
+    }
+
+    public static double add(double a, double b) {
+        return a + b;
+    }
+
+    public static double subtract(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+
+    public static double divide(double a, double b) {
         return a / b;
     }
 
-    public void usage() {
+    public static void usage() {
         System.out.println("\nUSAGE of Calculator\n");
         System.out.println("SYNOPSIS");
         System.out.println("     -command argument1 argument2\n");

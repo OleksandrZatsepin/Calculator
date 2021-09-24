@@ -6,7 +6,7 @@ public class Main {
         double[] x = {0.0, 0.0};
         int ex = 0;
 
-        Calculator calc = new Calculator( x[0],  x[1]);
+        Calculator calc = new Calculator();
 
         if (args.length == 3) {
             for (int i=1; i < args.length; i++) {
@@ -19,16 +19,16 @@ public class Main {
             }
             switch (args[0]) {
                 case "-a":
-                    System.out.println(x[0] + " + " + x[1] + " = " + calc.getAddition(x[0], x[1]));
+                    System.out.println(x[0] + " + " + x[1] + " = " + calc.add(x[0], x[1]));
                     break;
                 case "-d":
-                    System.out.println(x[0] + " / " + x[1] + " = " + calc.getSubtraction(x[0], x[1]));
+                    System.out.println(x[0] + " / " + x[1] + " = " + calc.divide(x[0], x[1]));
                     break;
                 case "-m":
-                    System.out.println(x[0] + " * " + x[1] + " = " + calc.getMultiplication(x[0], x[1]));
+                    System.out.println(x[0] + " * " + x[1] + " = " + calc.multiply(x[0], x[1]));
                     break;
                 case "-s":
-                    System.out.println(x[0] + " - " + x[1] + " = " + calc.getDivision(x[0], x[1]));
+                    System.out.println(x[0] + " - " + x[1] + " = " + calc.subtract(x[0], x[1]));
                     break;
                 default:
                     System.out.println("Incorrect command: " + args[0]);
