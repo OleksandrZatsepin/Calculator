@@ -5,39 +5,39 @@ public class Calculator {
     public Calculator() {
     }
 
-    public static int add(int a, int b) {
+    public int add(int a, int b) {
         return a + b;
     }
 
-    public static int subtract(int a, int b) {
+    public int subtract(int a, int b) {
         return a - b;
     }
 
-    public static int multiply(int a, int b) {
+    public int multiply(int a, int b) {
         return a * b;
     }
 
-    public static double divide(int a, int b) {
+    public double divide(int a, int b) {
         return (double) a / (double) b;
     }
 
-    public static double add(double a, double b) {
+    public double add(double a, double b) {
         return a + b;
     }
 
-    public static double subtract(double a, double b) {
+    public double subtract(double a, double b) {
         return a - b;
     }
 
-    public static double multiply(double a, double b) {
+    public double multiply(double a, double b) {
         return a * b;
     }
 
-    public static double divide(double a, double b) {
+    public double divide(double a, double b) {
         return a / b;
     }
 
-    public static void usage() {
+    public void usage() {
         System.out.println("\nUSAGE of Calculator\n");
         System.out.println("SYNOPSIS");
         System.out.println("     -command argument1 argument2\n");

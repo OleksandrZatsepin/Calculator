@@ -1,5 +1,6 @@
 package dev.surehand;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,59 +12,67 @@ class CalculatorTest {
     int x = 5;
     int y = 2;
 
+    Calculator calculator;
+
+    @BeforeEach
+    void setUp() {
+        calculator = new Calculator();
+    }
+
     @Test
     void add() {
         double expResult = 8.4;
-        double result = Calculator.add(a, b);
+        double result = calculator.add(a, b);
         assertEquals(expResult, result);
     }
 
     @Test
     void subtract() {
         double expResult = 4.2;
-        double result = Calculator.subtract(a, b);
+        double result = calculator.subtract(a, b);
         assertEquals(expResult, result);
     }
 
     @Test
     void multiply() {
         double expResult = 13.23;
-        double result = Calculator.multiply(a, b);
+        double result = calculator.multiply(a, b);
         assertEquals(expResult, result);
     }
 
     @Test
     void divide() {
         double expResult = 3.0;
-        double result = Calculator.divide(a, b);
+        double result = calculator.divide(a, b);
         assertEquals(expResult, result);
     }
 
     @Test
     void testAdd() {
         int expResult = 7;
-        int result = Calculator.add(x, y);
+        int result = calculator.add(x, y);
         assertEquals(expResult, result);
     }
 
     @Test
     void testSubtract() {
         int expResult = 3;
-        int result = Calculator.subtract(x, y);
+        int result = calculator.subtract(x, y);
         assertEquals(expResult, result);
     }
 
     @Test
     void testMultiply() {
         int expResult = 10;
-        double result = Calculator.multiply(x, y);
+        double result = calculator.multiply(x, y);
         assertEquals(expResult, result);
     }
 
     @Test
     void testDivide() {
         double expResult = 2.5;
-        double result = Calculator.divide(x, y);
+        double result = calculator.divide(x, y);
         assertEquals(expResult, result);
     }
+
 }
