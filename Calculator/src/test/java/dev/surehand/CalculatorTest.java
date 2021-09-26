@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
-    double a = 6.3;
-    double b = 2.1;
+    double a = 6.345;
+    double b = 0.123;
     int x = 5;
     int y = 2;
 
@@ -21,28 +21,28 @@ class CalculatorTest {
 
     @Test
     void add() {
-        double expResult = 8.4;
+        double expResult = 6.468;
         double result = calculator.add(a, b);
         assertEquals(expResult, result);
     }
 
     @Test
     void subtract() {
-        double expResult = 4.2;
+        double expResult = 6.222;
         double result = calculator.subtract(a, b);
         assertEquals(expResult, result);
     }
 
     @Test
     void multiply() {
-        double expResult = 13.23;
+        double expResult = 0.780435;
         double result = calculator.multiply(a, b);
         assertEquals(expResult, result);
     }
 
     @Test
     void divide() {
-        double expResult = 3.0;
+        double expResult = 51.58536585365854;
         double result = calculator.divide(a, b);
         assertEquals(expResult, result);
     }

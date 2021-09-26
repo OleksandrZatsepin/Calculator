@@ -19,16 +19,16 @@ public class Main {
             }
             switch (args[0]) {
                 case "-a":
-                    System.out.println(x[0] + " + " + x[1] + " = " + calculator.add(x[0], x[1]));
+                    System.out.println(args[1] + " + " + args[2] + " = " + calculator.add(x[0], x[1]));
                     break;
                 case "-d":
-                    System.out.println(x[0] + " / " + x[1] + " = " + calculator.divide(x[0], x[1]));
+                    System.out.println(args[1] + " / " + args[2] + " = " + calculator.divide(x[0], x[1]));
                     break;
                 case "-m":
-                    System.out.println(x[0] + " * " + x[1] + " = " + calculator.multiply(x[0], x[1]));
+                    System.out.println(args[1] + " * " + args[2] + " = " + calculator.multiply(x[0], x[1]));
                     break;
                 case "-s":
-                    System.out.println(x[0] + " - " + x[1] + " = " + calculator.subtract(x[0], x[1]));
+                    System.out.println(args[1] + " - " + args[2] + " = " + calculator.subtract(x[0], x[1]));
                     break;
                 default:
                     System.out.println("Incorrect command: " + args[0]);

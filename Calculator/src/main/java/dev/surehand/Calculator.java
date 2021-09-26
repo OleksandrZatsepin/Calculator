@@ -13,28 +13,32 @@ public class Calculator {
         return a - b;
     }
 
-    public int multiply(int a, int b) {
-        return a * b;
+    public long multiply(int a, int b) {
+        return (long) a * b;
     }
 
     public double divide(int a, int b) {
-        return (double) a / (double) b;
+        return (double) a / b;
     }
 
     public double add(double a, double b) {
-        return a + b;
+        return roundN(a + b, 14);
     }
 
     public double subtract(double a, double b) {
-        return a - b;
+        return roundN(a - b, 14);
     }
 
     public double multiply(double a, double b) {
-        return a * b;
+        return roundN(a * b, 14);
     }
 
     public double divide(double a, double b) {
-        return a / b;
+        return ((b == 0) ? a / b : roundN(a / b, 14));
+    }
+
+    private double roundN(double a, int n) {
+        return Math.round(a * Math.pow(10, n)) / Math.pow(10, n);
     }
 
     public void usage() {
