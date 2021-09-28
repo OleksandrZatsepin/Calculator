@@ -1,6 +1,7 @@
 package dev.surehand;
 
 public class Calculator {
+    private final int n = 14;
 
     public Calculator() {
     }
@@ -17,24 +18,24 @@ public class Calculator {
         return (long) a * b;
     }
 
-    public double divide(int a, int b) {
-        return (double) a / b;
+    public int divide(int a, int b) {
+        return a / b;
     }
 
     public double add(double a, double b) {
-        return roundN(a + b, 14);
+        return roundN(a + b, n);
     }
 
     public double subtract(double a, double b) {
-        return roundN(a - b, 14);
+        return roundN(a - b, n);
     }
 
     public double multiply(double a, double b) {
-        return roundN(a * b, 14);
+        return roundN(a * b, n);
     }
 
     public double divide(double a, double b) {
-        return ((b == 0) ? a / b : roundN(a / b, 14));
+        return ((b == 0) ? a / b : roundN(a / b, n));
     }
 
     private double roundN(double a, int n) {
@@ -56,7 +57,7 @@ public class Calculator {
         System.out.println("Any other command or the absence of at least one of the arguments brings up this help screen.\n");
         System.out.println("ARGUMENTS");
         System.out.println("     argument1, argument2");
-        System.out.println("            Type: double. Type int will be converted to type double.");
-
+        System.out.println("If at least one argument is of type double, the result will also be of type double.");
+        System.out.println("Division of an integer by an integer is an integer, the remainder of the division is discarded. \nFor example, 5/2 = 2.");
     }
 }
