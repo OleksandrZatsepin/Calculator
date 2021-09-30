@@ -1,5 +1,7 @@
 package dev.surehand;
 
+import java.math.BigDecimal;
+
 public class Calculator {
     private final int n = 14;
 
@@ -54,6 +56,7 @@ public class Calculator {
         System.out.println("     -d     Divides argument1 by argument2: argument1 / argument2");
         System.out.println("     -m     Multiplies two arguments: argument1 * argument2");
         System.out.println("     -s     Subtracts argument2 from argument1: argument1 - argument2");
+        System.out.println("     -ab, -db, -mb, -sb     additionally, the operation time is measured.");
         System.out.println("Any other command or the absence of at least one of the arguments brings up this help screen.\n");
         System.out.println("ARGUMENTS");
         System.out.println("     argument1, argument2");
